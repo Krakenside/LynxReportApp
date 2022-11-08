@@ -14,49 +14,40 @@
         <div>
             <!-- Dark Mode -->
             <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-            <button type="button" class="btn btn-sm btn-alt-secondary" data-toggle="layout"
-                data-action="dark_mode_toggle">
+            <button type="button" class="btn btn-sm btn-alt-secondary" data-toggle="layout" data-action="dark_mode_toggle">
                 <i class="far fa-moon"></i>
             </button>
             <!-- END Dark Mode -->
 
             <!-- Options -->
             <div class="dropdown d-inline-block ms-1">
-                <button type="button" class="btn btn-sm btn-alt-secondary" id="sidebar-themes-dropdown"
-                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="btn btn-sm btn-alt-secondary" id="sidebar-themes-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="far fa-circle"></i>
                 </button>
-                <div class="dropdown-menu dropdown-menu-end fs-sm smini-hide border-0"
-                    aria-labelledby="sidebar-themes-dropdown">
+                <div class="dropdown-menu dropdown-menu-end fs-sm smini-hide border-0" aria-labelledby="sidebar-themes-dropdown">
                     <!-- Color Themes -->
                     <!-- Layout API, functionality initialized in Template._uiHandleTheme() -->
-                    <a class="dropdown-item d-flex align-items-center justify-content-between fw-medium"
-                        data-toggle="theme" data-theme="default" href="#">
+                    <a class="dropdown-item d-flex align-items-center justify-content-between fw-medium" data-toggle="theme" data-theme="default" href="#">
                         <span>Default</span>
                         <i class="fa fa-circle text-default"></i>
                     </a>
-                    <a class="dropdown-item d-flex align-items-center justify-content-between fw-medium"
-                        data-toggle="theme" data-theme="assets/css/themes/amethyst.min.css" href="#">
+                    <a class="dropdown-item d-flex align-items-center justify-content-between fw-medium" data-toggle="theme" data-theme="assets/css/themes/amethyst.min.css" href="#">
                         <span>Amethyst</span>
                         <i class="fa fa-circle text-amethyst"></i>
                     </a>
-                    <a class="dropdown-item d-flex align-items-center justify-content-between fw-medium"
-                        data-toggle="theme" data-theme="assets/css/themes/city.min.css" href="#">
+                    <a class="dropdown-item d-flex align-items-center justify-content-between fw-medium" data-toggle="theme" data-theme="assets/css/themes/city.min.css" href="#">
                         <span>City</span>
                         <i class="fa fa-circle text-city"></i>
                     </a>
-                    <a class="dropdown-item d-flex align-items-center justify-content-between fw-medium"
-                        data-toggle="theme" data-theme="assets/css/themes/flat.min.css" href="#">
+                    <a class="dropdown-item d-flex align-items-center justify-content-between fw-medium" data-toggle="theme" data-theme="assets/css/themes/flat.min.css" href="#">
                         <span>Flat</span>
                         <i class="fa fa-circle text-flat"></i>
                     </a>
-                    <a class="dropdown-item d-flex align-items-center justify-content-between fw-medium"
-                        data-toggle="theme" data-theme="assets/css/themes/modern.min.css" href="#">
+                    <a class="dropdown-item d-flex align-items-center justify-content-between fw-medium" data-toggle="theme" data-theme="assets/css/themes/modern.min.css" href="#">
                         <span>Modern</span>
                         <i class="fa fa-circle text-modern"></i>
                     </a>
-                    <a class="dropdown-item d-flex align-items-center justify-content-between fw-medium"
-                        data-toggle="theme" data-theme="assets/css/themes/smooth.min.css" href="#">
+                    <a class="dropdown-item d-flex align-items-center justify-content-between fw-medium" data-toggle="theme" data-theme="assets/css/themes/smooth.min.css" href="#">
                         <span>Smooth</span>
                         <i class="fa fa-circle text-smooth"></i>
                     </a>
@@ -66,12 +57,10 @@
 
                     <!-- Sidebar Styles -->
                     <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                    <a class="dropdown-item fw-medium" data-toggle="layout" data-action="sidebar_style_light"
-                        href="javascript:void(0)">
+                    <a class="dropdown-item fw-medium" data-toggle="layout" data-action="sidebar_style_light" href="javascript:void(0)">
                         <span>Sidebar Light</span>
                     </a>
-                    <a class="dropdown-item fw-medium" data-toggle="layout" data-action="sidebar_style_dark"
-                        href="javascript:void(0)">
+                    <a class="dropdown-item fw-medium" data-toggle="layout" data-action="sidebar_style_dark" href="javascript:void(0)">
                         <span>Sidebar Dark</span>
                     </a>
                     <!-- END Sidebar Styles -->
@@ -80,12 +69,10 @@
 
                     <!-- Header Styles -->
                     <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                    <a class="dropdown-item fw-medium" data-toggle="layout" data-action="header_style_light"
-                        href="javascript:void(0)">
+                    <a class="dropdown-item fw-medium" data-toggle="layout" data-action="header_style_light" href="javascript:void(0)">
                         <span>Header Light</span>
                     </a>
-                    <a class="dropdown-item fw-medium" data-toggle="layout" data-action="header_style_dark"
-                        href="javascript:void(0)">
+                    <a class="dropdown-item fw-medium" data-toggle="layout" data-action="header_style_dark" href="javascript:void(0)">
                         <span>Header Dark</span>
                     </a>
                     <!-- END Header Styles -->
@@ -95,8 +82,7 @@
 
             <!-- Close Sidebar, Visible only on mobile screens -->
             <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-            <a class="d-lg-none btn btn-sm btn-alt-secondary ms-1" data-toggle="layout" data-action="sidebar_close"
-                href="javascript:void(0)">
+            <a class="d-lg-none btn btn-sm btn-alt-secondary ms-1" data-toggle="layout" data-action="sidebar_close" href="javascript:void(0)">
                 <i class="fa fa-fw fa-times"></i>
             </a>
             <!-- END Close Sidebar -->
@@ -117,15 +103,13 @@
                     </a>
                 </li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
-                        aria-expanded="false" href="#">
+                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                         <i class="nav-main-link-icon si si-layers"></i>
                         <span class="nav-main-link-name">Rapports</span>
                     </a>
                     <ul class="nav-main-submenu">
                         <li class="nav-main-item">
-                            <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
-                                aria-expanded="false" href="#">
+                            <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                                 <i class="nav-main-link-icon si si-bag"></i>
                                 <span class="nav-main-link-name">Creer</span>
                             </a>
@@ -146,8 +130,7 @@
 
                 </li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
-                        aria-expanded="false" href="#">
+                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                         <i class="nav-main-link-icon si si-pencil"></i>
                         <span class="nav-main-link-name">Blog</span>
                     </a>
@@ -180,8 +163,7 @@
                     </ul>
                 </li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
-                        aria-expanded="false" href="#">
+                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                         <i class="nav-main-link-icon si si-graduation"></i>
                         <span class="nav-main-link-name">e-Learning</span>
                     </a>
@@ -204,8 +186,7 @@
                     </ul>
                 </li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
-                        aria-expanded="false" href="#">
+                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                         <i class="nav-main-link-icon si si-bubbles"></i>
                         <span class="nav-main-link-name">Forum</span>
                     </a>
@@ -228,8 +209,7 @@
                     </ul>
                 </li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
-                        aria-expanded="false" href="#">
+                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                         <i class="nav-main-link-icon si si-magnet"></i>
                         <span class="nav-main-link-name">Boxed Backend</span>
                     </a>
@@ -280,8 +260,7 @@
             </li>
             <li class="nav-main-heading">User Interface</li>
             <li class="nav-main-item">
-                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
-                    aria-expanded="false" href="#">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                     <i class="nav-main-link-icon si si-energy"></i>
                     <span class="nav-main-link-name">Interventions</span>
                 </a>
@@ -301,8 +280,7 @@
                 </ul>
             </li>
             <li class="nav-main-item">
-                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
-                    aria-expanded="false" href="#">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                     <i class="nav-main-link-icon si si-badge"></i>
                     <span class="nav-main-link-name">Technicien</span>
                 </a>
@@ -322,8 +300,7 @@
                 </ul>
             </li>
             <li class="nav-main-item open">
-                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
-                    aria-expanded="true" href="#">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">
                     <i class="nav-main-link-icon si si-grid"></i>
                     <span class="nav-main-link-name">Tables</span>
                 </a>
@@ -334,7 +311,7 @@
                         </a>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link" href="be_tables_responsive.html">
+                        <a class="nav-main-link" href="#">
                             <span class="nav-main-link-name">Rapports</span>
                         </a>
                     </li>
@@ -344,12 +321,12 @@
                         </a>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link active" href="be_tables_datatables.html">
+                        <a class="nav-main-link active" href="{{route('IndexTech')}}">
                             <span class="nav-main-link-name">Technicien</span>
                         </a>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link active" href="be_tables_datatables.html">
+                        <a class="nav-main-link active" href="{{ route('TypeMainIndx') }}">
                             <span class="nav-main-link-name">Maintenance</span>
                         </a>
                     </li>
@@ -368,8 +345,7 @@
 
             <li class="nav-main-heading">Types</li>
             <li class="nav-main-item">
-                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
-                    aria-expanded="false" href="#">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                     <i class="nav-main-link-icon si si-wrench"></i>
                     <span class="nav-main-link-name">Type Intervention</span>
                 </a>
@@ -388,15 +364,13 @@
                 </ul>
             </li>
             <li class="nav-main-item">
-                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
-                    aria-expanded="false" href="#">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                     <i class="nav-main-link-icon si si-magic-wand"></i>
                     <span class="nav-main-link-name">Type Maintenance</span>
                 </a>
                 <ul class="nav-main-submenu">
                     <li class="nav-main-item">
-                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
-                            aria-expanded="false" href="#">
+                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                             <span class="nav-main-link-name">Page</span>
                         </a>
                         <ul class="nav-main-submenu">
@@ -418,8 +392,7 @@
                         </ul>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
-                            aria-expanded="false" href="#">
+                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                             <span class="nav-main-link-name">Dark Mode</span>
                         </a>
                         <ul class="nav-main-submenu">
@@ -438,8 +411,7 @@
 
 
                     <li class="nav-main-item">
-                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
-                            aria-expanded="false" href="#">
+                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                             <span class="nav-main-link-name">Header</span>
                         </a>
                         <ul class="nav-main-submenu">
@@ -468,8 +440,7 @@
                         </ul>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
-                            aria-expanded="false" href="#">
+                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                             <span class="nav-main-link-name">Sidebar</span>
                         </a>
                         <ul class="nav-main-submenu">
@@ -496,8 +467,7 @@
                         </ul>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
-                            aria-expanded="false" href="#">
+                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                             <span class="nav-main-link-name">Side Overlay</span>
                         </a>
                         <ul class="nav-main-submenu">
@@ -526,8 +496,7 @@
                 </ul>
             </li>
             <li class="nav-main-item">
-                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
-                    aria-expanded="false" href="#">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                     <i class="nav-main-link-icon si si-puzzle"></i>
                     <span class="nav-main-link-name">Materiel</span>
                 </a>
@@ -549,8 +518,7 @@
 
 
             <li class="nav-main-item">
-                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
-                    aria-expanded="false" href="#">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                     <i class="nav-main-link-icon si si-lock"></i>
                     <span class="nav-main-link-name">Authentification</span>
                 </a>
@@ -579,8 +547,7 @@
                 </ul>
             </li>
             <li class="nav-main-item">
-                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
-                    aria-expanded="false" href="#">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                     <i class="nav-main-link-icon si si-fire"></i>
                     <span class="nav-main-link-name">Se Deconnecter</span>
                 </a>

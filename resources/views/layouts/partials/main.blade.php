@@ -509,7 +509,7 @@
                     <a class="link-fx" href="javascript:void(0)">Tables</a>
                   </li>
                   <li class="breadcrumb-item" aria-current="page">
-                    DataTables
+                    Type maintenance
                   </li>
                 </ol>
               </nav>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\TechnicienController;
 use App\Http\Controllers\TypeInterventionController;
+use App\Http\Controllers\TypeMaintenanceController;
 use App\Models\TypeIntervention;
 use Illuminate\Routing\RouteRegistrar;
 use Illuminate\Support\Facades\Route;
@@ -44,3 +45,7 @@ Route::get('/TypeIntervention/Create/', [TypeInterventionController::class, 'cre
 Route::post('/TypeIntervention/Store/', [TypeInterventionController::class, 'store'])->name('TypeIntStore');
 Route::get('/TypeIntervention/Edit/', [TypeInterventionController::class, 'edit'])->name('TypeIntEdit');
 Route::post('/TypeIntervention/Update/', [TypeIntervention::class, 'update'])->name('TypeIntEdit');
+
+//Type maintenance 
+
+Route::get('/TypeMaintenance/', [TypeMaintenanceController::class, 'index'])->name('TypeMainIndx');

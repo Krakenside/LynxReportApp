@@ -16,7 +16,13 @@ class Rapport extends Model
     {
         return $this->hasMany(TypeIntervention::class);
     }
-    public function Technicien(){
+    public function Technicien()
+    {
         return $this->hasOne(Rapport::class);
+    }
+
+    public function Maintenance()
+    {
+        return $this->hasMany(Maintenance::class);
     }
 }
