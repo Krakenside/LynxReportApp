@@ -311,7 +311,7 @@
                         </a>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link" href="#">
+                        <a class="nav-main-link" href="{{route('RapportIndex')}}">
                             <span class="nav-main-link-name">Rapports</span>
                         </a>
                     </li>

@@ -10,6 +10,6 @@ class Client extends Model
 {
     use HasFactory;
     public function Rapports (){
-        return $this->HasMany(Client::class);
+        return $this->HasMany(Rapport::class);
     }
 }

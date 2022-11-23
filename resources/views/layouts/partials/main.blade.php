@@ -15,16 +15,14 @@
     <!-- Page JS Plugins CSS -->
     <link rel="stylesheet" href="{{ asset('js/plugins/datatables-bs5/css/dataTables.bootstrap5.min.css') }}">
     <link rel="stylesheet" href="{{ asset('js/plugins/datatables-buttons-bs5/css/buttons.bootstrap5.min.css') }}">
-    <link rel="stylesheet"
-        href="{{ asset('js/plugins/datatables-responsive-bs5/css/responsive.bootstrap5.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('js/plugins/datatables-responsive-bs5/css/responsive.bootstrap5.min.css') }}">
 
     <!-- OneUI framework -->
     <link rel="stylesheet" id="css-main" href="{{ asset('css/oneui.min.css') }}">
 </head>
 
 <body>
-    <div id="page-container"
-        class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed main-content-narrow">
+    <div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed main-content-narrow">
         <aside id="side-overlay">
             <!-- Side Header -->
             <div class="content-header border-bottom">
@@ -42,8 +40,7 @@
 
                 <!-- Close Side Overlay -->
                 <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                <a class="ms-auto btn btn-sm btn-alt-danger" href="javascript:void(0)" data-toggle="layout"
-                    data-action="side_overlay_close">
+                <a class="ms-auto btn btn-sm btn-alt-danger" href="javascript:void(0)" data-toggle="layout" data-action="side_overlay_close">
                     <i class="fa fa-fw fa-times"></i>
                 </a>
                 <!-- END Close Side Overlay -->
@@ -56,35 +53,28 @@
                 <div class="block block-transparent pull-x pull-t">
                     <ul class="nav nav-tabs nav-tabs-block nav-justified" role="tablist">
                         <li class="nav-item">
-                            <button type="button" class="nav-link active" id="so-overview-tab" data-bs-toggle="tab"
-                                data-bs-target="#so-overview" role="tab" aria-controls="so-overview"
-                                aria-selected="true">
+                            <button type="button" class="nav-link active" id="so-overview-tab" data-bs-toggle="tab" data-bs-target="#so-overview" role="tab" aria-controls="so-overview" aria-selected="true">
                                 <i class="fa fa-fw fa-coffee text-gray opacity-75 me-1"></i> Overview
                             </button>
                         </li>
                         <li class="nav-item">
-                            <button type="button" class="nav-link" id="so-sales-tab" data-bs-toggle="tab"
-                                data-bs-target="#so-sales" role="tab" aria-controls="so-sales"
-                                aria-selected="false">
+                            <button type="button" class="nav-link" id="so-sales-tab" data-bs-toggle="tab" data-bs-target="#so-sales" role="tab" aria-controls="so-sales" aria-selected="false">
                                 <i class="fa fa-fw fa-chart-line text-gray opacity-75 me-1"></i> Sales
                             </button>
                         </li>
                     </ul>
                     <div class="block-content tab-content overflow-hidden">
                         <!-- Overview Tab -->
-                        <div class="tab-pane pull-x fade fade-left show active" id="so-overview" role="tabpanel"
-                            aria-labelledby="so-overview-tab">
+                        <div class="tab-pane pull-x fade fade-left show active" id="so-overview" role="tabpanel" aria-labelledby="so-overview-tab">
                             <!-- Activity -->
                             <div class="block block-transparent">
                                 <div class="block-header block-header-default">
                                     <h3 class="block-title">Recent Activity</h3>
                                     <div class="block-options">
-                                        <button type="button" class="btn-block-option" data-toggle="block-option"
-                                            data-action="state_toggle" data-action-mode="demo">
+                                        <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
                                             <i class="si si-refresh"></i>
                                         </button>
-                                        <button type="button" class="btn-block-option" data-toggle="block-option"
-                                            data-action="content_toggle"></button>
+                                        <button type="button" class="btn-block-option" data-toggle="block-option" data-action="content_toggle"></button>
                                     </div>
                                 </div>
                                 <div class="block-content">
@@ -137,12 +127,10 @@
                                 <div class="block-header block-header-default">
                                     <h3 class="block-title">Online Friends</h3>
                                     <div class="block-options">
-                                        <button type="button" class="btn-block-option" data-toggle="block-option"
-                                            data-action="state_toggle" data-action-mode="demo">
+                                        <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
                                             <i class="si si-refresh"></i>
                                         </button>
-                                        <button type="button" class="btn-block-option" data-toggle="block-option"
-                                            data-action="content_toggle"></button>
+                                        <button type="button" class="btn-block-option" data-toggle="block-option" data-action="content_toggle"></button>
                                     </div>
                                 </div>
                                 <div class="block-content">
@@ -151,10 +139,8 @@
                                         <li>
                                             <a class="d-flex py-2" href="javascript:void(0)">
                                                 <div class="me-3 ms-2 overlay-container overlay-bottom">
-                                                    <img class="img-avatar img-avatar48"
-                                                        src="assets/media/avatars/avatar3.jpg" alt="">
-                                                    <span
-                                                        class="overlay-item item item-tiny item-circle border border-2 border-white bg-success"></span>
+                                                    <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar3.jpg" alt="">
+                                                    <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-success"></span>
                                                 </div>
                                                 <div class="flex-grow-1 fs-sm">
                                                     <div class="fw-semibold">Lori Grant</div>
@@ -165,10 +151,8 @@
                                         <li>
                                             <a class="d-flex py-2" href="javascript:void(0)">
                                                 <div class="me-3 ms-2 overlay-container overlay-bottom">
-                                                    <img class="img-avatar img-avatar48"
-                                                        src="assets/media/avatars/avatar12.jpg" alt="">
-                                                    <span
-                                                        class="overlay-item item item-tiny item-circle border border-2 border-white bg-success"></span>
+                                                    <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar12.jpg" alt="">
+                                                    <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-success"></span>
                                                 </div>
                                                 <div class="flex-grow-1 fs-sm">
                                                     <div class="fw-semibold">Thomas Riley</div>
@@ -179,10 +163,8 @@
                                         <li>
                                             <a class="d-flex py-2" href="javascript:void(0)">
                                                 <div class="me-3 ms-2 overlay-container overlay-bottom">
-                                                    <img class="img-avatar img-avatar48"
-                                                        src="assets/media/avatars/avatar3.jpg" alt="">
-                                                    <span
-                                                        class="overlay-item item item-tiny item-circle border border-2 border-white bg-success"></span>
+                                                    <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar3.jpg" alt="">
+                                                    <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-success"></span>
                                                 </div>
                                                 <div class="flex-grow-1 fs-sm">
                                                     <div class="fw-semibold">Melissa Rice</div>
@@ -193,10 +175,8 @@
                                         <li>
                                             <a class="d-flex py-2" href="javascript:void(0)">
                                                 <div class="me-3 ms-2 overlay-container overlay-bottom">
-                                                    <img class="img-avatar img-avatar48"
-                                                        src="assets/media/avatars/avatar4.jpg" alt="">
-                                                    <span
-                                                        class="overlay-item item item-tiny item-circle border border-2 border-white bg-warning"></span>
+                                                    <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar4.jpg" alt="">
+                                                    <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-warning"></span>
                                                 </div>
                                                 <div class="flex-grow-1 fs-sm">
                                                     <div class="fw-semibold">Danielle Jones</div>
@@ -207,10 +187,8 @@
                                         <li>
                                             <a class="d-flex py-2" href="javascript:void(0)">
                                                 <div class="me-3 ms-2 overlay-container overlay-bottom">
-                                                    <img class="img-avatar img-avatar48"
-                                                        src="assets/media/avatars/avatar16.jpg" alt="">
-                                                    <span
-                                                        class="overlay-item item item-tiny item-circle border border-2 border-white bg-warning"></span>
+                                                    <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar16.jpg" alt="">
+                                                    <span class="overlay-item item item-tiny item-circle border border-2 border-white bg-warning"></span>
                                                 </div>
                                                 <div class="flex-grow-1 fs-sm">
                                                     <div class="fw-semibold">Jose Wagner</div>
@@ -229,8 +207,7 @@
                                 <div class="block-header block-header-default">
                                     <h3 class="block-title">Quick Settings</h3>
                                     <div class="block-options">
-                                        <button type="button" class="btn-block-option" data-toggle="block-option"
-                                            data-action="content_toggle"></button>
+                                        <button type="button" class="btn-block-option" data-toggle="block-option" data-action="content_toggle"></button>
                                     </div>
                                 </div>
                                 <div class="block-content">
@@ -241,8 +218,7 @@
                                                 Online Status
                                             </p>
                                             <div class="form-check form-switch">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="so-settings-check1" name="so-settings-check1" checked>
+                                                <input class="form-check-input" type="checkbox" value="" id="so-settings-check1" name="so-settings-check1" checked>
                                                 <label class="form-check-label fs-sm" for="so-settings-check1">Show
                                                     your status to all</label>
                                             </div>
@@ -252,8 +228,7 @@
                                                 Auto Updates
                                             </p>
                                             <div class="form-check form-switch">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="so-settings-check2" name="so-settings-check2" checked>
+                                                <input class="form-check-input" type="checkbox" value="" id="so-settings-check2" name="so-settings-check2" checked>
                                                 <label class="form-check-label fs-sm" for="so-settings-check2">Keep up
                                                     to date</label>
                                             </div>
@@ -264,14 +239,11 @@
                                             </p>
                                             <div class="space-y-2">
                                                 <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="so-settings-check3" name="so-settings-check3" checked>
-                                                    <label class="form-check-label fs-sm"
-                                                        for="so-settings-check3">Email Notifications</label>
+                                                    <input class="form-check-input" type="checkbox" value="" id="so-settings-check3" name="so-settings-check3" checked>
+                                                    <label class="form-check-label fs-sm" for="so-settings-check3">Email Notifications</label>
                                                 </div>
                                                 <div class="form-check form-switch">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="so-settings-check4" name="so-settings-check4" checked>
+                                                    <input class="form-check-input" type="checkbox" value="" id="so-settings-check4" name="so-settings-check4" checked>
                                                     <label class="form-check-label fs-sm" for="so-settings-check4">SMS
                                                         Notifications</label>
                                                 </div>
@@ -282,8 +254,7 @@
                                                 API
                                             </p>
                                             <div class="form-check form-switch">
-                                                <input class="form-check-input" type="checkbox" value=""
-                                                    id="so-settings-check5" name="so-settings-check5" checked>
+                                                <input class="form-check-input" type="checkbox" value="" id="so-settings-check5" name="so-settings-check5" checked>
                                                 <label class="form-check-label fs-sm" for="so-settings-check5">Enable
                                                     access</label>
                                             </div>
@@ -297,8 +268,7 @@
                         <!-- END Overview Tab -->
 
                         <!-- Sales Tab -->
-                        <div class="tab-pane pull-x fade fade-right" id="so-sales" role="tabpanel"
-                            aria-labelledby="so-sales-tab">
+                        <div class="tab-pane pull-x fade fade-right" id="so-sales" role="tabpanel" aria-labelledby="so-sales-tab">
                             <div class="block block-transparent mb-0">
                                 <!-- Stats -->
                                 <div class="block-content">
@@ -489,43 +459,43 @@
         @include('layouts.partials.menu-left')
         @include('layouts.partials.header')
 
-           <!-- Main Container -->
-      <main id="main-container">
-        <!-- Hero -->
-        <div class="bg-body-light">
-          <div class="content content-full">
-            <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center py-2">
-              <div class="flex-grow-1">
-                <h1 class="h3 fw-bold mb-2">
-                 
-                </h1>
-                <h2 class="fs-base lh-base fw-medium text-muted mb-0">
-                  
-                </h2>
-              </div>
-              <nav class="flex-shrink-0 mt-3 mt-sm-0 ms-sm-3" aria-label="breadcrumb">
-                <ol class="breadcrumb breadcrumb-alt">
-                  <li class="breadcrumb-item">
-                    <a class="link-fx" href="javascript:void(0)">Tables</a>
-                  </li>
-                  <li class="breadcrumb-item" aria-current="page">
-                    Type maintenance
-                  </li>
-                </ol>
-              </nav>
-            </div>
-          </div>
-        </div>
-        <!-- END Hero -->
+        <!-- Main Container -->
+        <main id="main-container">
+            <!-- Hero -->
+            <div class="bg-body-light">
+                <div class="content content-full">
+                    <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center py-2">
+                        <div class="flex-grow-1">
+                            <h1 class="h3 fw-bold mb-2">
 
-        <!-- Page Content -->
-        <div class="content">
-            @yield('content-pr')
-          
-        </div>
-        <!-- END Page Content -->
-      </main>
-      <!-- END Main Container -->
+                            </h1>
+                            <h2 class="fs-base lh-base fw-medium text-muted mb-0">
+
+                            </h2>
+                        </div>
+                        <nav class="flex-shrink-0 mt-3 mt-sm-0 ms-sm-3" aria-label="breadcrumb">
+                            <ol class="breadcrumb breadcrumb-alt">
+                                <li class="breadcrumb-item">
+                                    <a class="link-fx" href="javascript:void(0)">Tables</a>
+                                </li>
+                                <li class="breadcrumb-item" aria-current="page">
+                                    Type Maintenance
+                                </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- END Hero -->
+
+            <!-- Page Content -->
+            <div class="content">
+                @yield('content-pr')
+
+            </div>
+            <!-- END Page Content -->
+        </main>
+        <!-- END Main Container -->
 
     </div>
 

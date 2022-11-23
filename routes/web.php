@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\RapportController;
 use App\Http\Controllers\TechnicienController;
 use App\Http\Controllers\TypeInterventionController;
 use App\Http\Controllers\TypeMaintenanceController;
@@ -49,3 +50,9 @@ Route::post('/TypeIntervention/Update/', [TypeIntervention::class, 'update'])->n
 //Type maintenance 
 
 Route::get('/TypeMaintenance/', [TypeMaintenanceController::class, 'index'])->name('TypeMainIndx');
+Route::post('/TypeMaintenance/create/', [TypeMaintenanceController::class, 'create'])->name('TypeMainCreate');
+
+
+Route::get('/Rapports/', [RapportController::class, 'index'])->name('RapportIndex');
+Route::get('/Rapports/create', [RapportController::class, 'create'])->name('RapportCreate');
+Route::post('/Rapports/store/',[RapportController::class,'store'])->name('rapportStore');

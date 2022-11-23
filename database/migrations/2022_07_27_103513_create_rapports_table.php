@@ -1,9 +1,6 @@
 <?php
 
-use App\Models\Client;
-use App\Models\Materiel;
-use App\Models\Technicien;
-use App\Models\TypeIntervention;
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -19,7 +16,7 @@ class CreateRapportsTable extends Migration
     {
         Schema::create('rapports', function (Blueprint $table) {
             $table->id();
-            $table->string('Intitule_rap',255);
+            $table->string('Intitule_rap', 255);
             $table->dateTime('DateH_rap');
             $table->date('Date_rap');
             $table->string('Nom_Int_rap');
@@ -28,11 +25,18 @@ class CreateRapportsTable extends Migration
             $table->string('Constat_rap', 500);
             $table->string('Solution_rap', 500);
             $table->string('Observations_rap', 500);
-            $table->boolean('a_facturer_rap');
-            $table->foreignId(Client::class);
-            $table->foreignId(TypeIntervention::class);
-            $table->foreignId(Materiel::class);
-            $table->foreignId(Technicien::class);
+            $table->tinyInteger('a_facturer_rap');
+            $table->tinyInteger('Verification');
+            $table->tinyInteger('Deplacement');
+            $table->tinyInteger('Installation');
+            $table->tinyInteger('Configuration');
+            $table->tinyInteger('Autre');
+            $table->tinyInteger('Maintenance_Materielle');
+            $table->tinyInteger('Maintenance_Logicielle');
+            $table->unsignedBigInteger('client_id');
+            $table->unsignedBigInteger('Tech_id');
+            $table->foreign('client_id')->references('id')->on('clients');
+            $table->foreign('Tech_id')->references('id')->on('techniciens');
             $table->timestamps();
         });
     }

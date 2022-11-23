@@ -10,7 +10,7 @@ class Rapport extends Model
     use HasFactory;
     public function Client()
     {
-        return $this->hasOne(Rapport::class);
+        return $this->belongsTo(Client::class);
     }
     public function TypeIntervention()
     {
@@ -18,7 +18,7 @@ class Rapport extends Model
     }
     public function Technicien()
     {
-        return $this->hasOne(Rapport::class);
+        return $this->belongsTo(Technicien::class);
     }
 
     public function Maintenance()

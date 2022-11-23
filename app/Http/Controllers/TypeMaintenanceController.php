@@ -17,17 +17,19 @@ class TypeMaintenanceController extends Controller
         //
         $allTypeMaint = TypeMaintenance::all();
         $msg = '';
-        return view('TypeMaintenance.index', compact('allTypeMaint', 'msg'));
+        // return view('TypeMaintenance.index', compact('allTypeMaint', 'msg'));
+        // dd($allTypeMaint);
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new resource. 
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
         //
+        return view('TypeMaintenance.create');
     }
 
     /**
@@ -38,6 +40,13 @@ class TypeMaintenanceController extends Controller
      */
     public function store(Request $request)
     {
+
+        $newM = new TypeMaintenance();
+        $newM->libelle_maint = $request->libelle_maint ; 
+        $newM->save();
+        $msg = "Le type de maintenance ".$newM." a été crée avec success ! ";
+
+        return view('TypeMaintenance.index',compact('msg'));
         //
     }
 
