@@ -16,7 +16,7 @@ return new class extends Migration
             // $table->foreignId('user_')
             $table->text('Title');
             $table->longText('Description');
-            $table->enum('statut', ['En cours', 'En attendant', 'Termine']);
+            $table->enum('statut', ['En cours', 'En attendant', 'Terminé']);
             $table->date('date_debut');
             $table->date('date_fin');
             $table->foreignId('incident_id');

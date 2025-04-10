@@ -13,6 +13,8 @@ class ClientController extends Controller
     public function index()
     {
         //
+        $clients = Client::all();
+        return view('Clients.index', compact('clients'));
     }
 
     /**
@@ -28,7 +30,8 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //enregistrer un nouveau client 
+
     }
 
     /**
@@ -37,6 +40,7 @@ class ClientController extends Controller
     public function show(Client $client)
     {
         //
+        return view('Clients.show', compact('client'));
     }
 
     /**
