@@ -23,6 +23,8 @@ class ClientController extends Controller
     public function create()
     {
         //
+        $client_type = Client::all();
+        return view('Clients.create', compact('client_type'));
     }
 
     /**
@@ -30,8 +32,25 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //enregistrer un nouveau client 
-
+        //enregistrer un nouveau client
+        // dd($request->all());
+        $validated = $request->validate([
+            'designation' => 'required|string|max:100',
+            'type' => 'required|string',
+            'adresse' => 'required|string|max:255',
+            'telephone' => 'required|max:20',
+            'adr_mail' => 'required|string'
+        ]);
+        // Client::create($validated);
+        $newCLient = new Client([
+            'designation' => $request->input('designation'),
+            'type' => $request->input('type'),
+            'adresse' => $request->input('adresse'),
+            'telephone' => $request->input('telephone'),
+            'adr_mail' => $request->input('adr_mail')
+        ]);
+        $newCLient->save();
+        return redirect()->route('Clients.index')->with('success', 'Client crée avec succès !');
     }
 
     /**

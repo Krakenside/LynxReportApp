@@ -5,15 +5,29 @@
 @section('content')
 <div class="container-fluid">
     <div class="row">
+        @if (Session::has('message'))
+        <div class="alert alert-info">{{ Session::get('message') }}</div>
+        @endif
         <div class="col-12">
             <div class="card">
+                <button type="button" class="btn btn-primary mb-2"> <a href="{{route('Client.create')}}">Créer un
+                        nouveau client</a></button>
                 <div class="card-header">
+
                     <h3 class="card-title">Liste des clients de LYNX NETWORK</h3>
+                    {{-- <button type="button" class="btn btn-primary mb-2"> <a href="{{route('Client.create')}}">Créer
+                            un
+                            nouveau client</a></button> --}}
                 </div>
                 <!-- /.card-header -->
+
                 <div class="card-body">
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
+                            {{-- <td>
+                                <button type="button" class="btn btn-block bg-gradient-success">Créer un nouveau
+                                    client</button>
+                            </td> --}}
                             <tr>
                                 <th>Désignation</th>
                                 <th>Type</th>
@@ -33,23 +47,7 @@
                             </tr>
                             @endforeach
 
-                            {{-- <tr>
-                                <td>Trident</td>
-                                <td>Internet
-                                    Explorer 5.0
-                                </td>
-                                <td>Win 95+</td>
-                                <td>5</td>
-                                <td>C</td>
-                            </tr>
 
-                            <tr>
-                                <td>Other browsers</td>
-                                <td>All others</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td>U</td>
-                            </tr> --}}
                         </tbody>
                         <tfoot>
                             <tr>
@@ -68,3 +66,20 @@
     </div>
 </div>
 @endsection
+<script>
+    $(function () {
+      $("#example1").DataTable({
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
+    });
+</script>

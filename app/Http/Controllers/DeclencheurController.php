@@ -13,6 +13,8 @@ class DeclencheurController extends Controller
     public function index()
     {
         //
+        $decls = Declencheur::all();
+        return view('Declencheur.index', compact('decls'));
     }
 
     /**
@@ -20,7 +22,8 @@ class DeclencheurController extends Controller
      */
     public function create()
     {
-        //
+        //creer une ressource
+        return view('Declencheur.create');
     }
 
     /**

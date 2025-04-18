@@ -3,7 +3,16 @@
         <span class="brand-text font-weight-light">Back Office </span>
     </a>
     <div class="sidebar">
-        <nav>
+        <!-- Sidebar user (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img src="{{asset('adminlte/dist/img/avatar2.png')}}" class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+                <a href="#" class="d-block">Administrateur </a>
+            </div>
+        </div>
+        <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" role="menu">
                 <li class="nav-item">
                     <a href="{{ url('/admin') }}" class="nav-link">
@@ -11,7 +20,36 @@
                         <p>Tableau de bord </p>
                     </a>
                 </li>
-                <!-- Ajoute d'autres liens ici -->
+                <li class="nav-item">
+                    <a href="{{ route('Clients.index')}}" class="nav-link">
+                        {{-- <i class="fa-solid fa-users"></i> --}}
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Clients
+                            {{-- <span class="right badge badge-danger">New</span> --}}
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('Sites.index')}}" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Sites
+                            {{-- <span class="right badge badge-danger">New</span> --}}
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#x" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        {{-- <i class="nav-icon fas fa-th"></i> --}}
+
+                        <p>
+                            Interventions
+                            {{-- <i class="nav-icon fas fa-tree"></i> --}}
+                        </p>
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>

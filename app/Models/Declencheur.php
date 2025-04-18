@@ -26,6 +26,6 @@ class Declencheur extends Model
 
     public function Client(){
 
-        return $this->belongsTo(Client::class,'client_id');
+        return $this->belongsTo(Client::class,'client_id','id');
     }
 }
