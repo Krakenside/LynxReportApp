@@ -40,12 +40,23 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#x" class="nav-link">
+                    <a href="{{ route('intervention.index')}}" class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>
                         {{-- <i class="nav-icon fas fa-th"></i> --}}
 
                         <p>
                             Interventions
+                            {{-- <i class="nav-icon fas fa-tree"></i> --}}
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('signalement.index')}}" class="nav-link">
+                        <i class="nav-icon fas fa-tree"></i>
+                        {{-- <i class="nav-icon fas fa-th"></i> --}}
+
+                        <p>
+                            Signalements
                             {{-- <i class="nav-icon fas fa-tree"></i> --}}
                         </p>
                     </a>

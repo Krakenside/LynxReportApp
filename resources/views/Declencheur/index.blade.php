@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Clients')
+@section('title', 'Signalement')
 
 @section('content')
 <div class="container-fluid">
@@ -8,9 +8,9 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Liste des Sites des signalements de LYNX NETWORK</h3>
+                    <h3 class="card-title"> Liste des signalements </h3>
                     <button type="button" class="btn btn-block bg-gradient-success">
-                        <a href="{{ route('Sites.create') }}">Enregistrer un nouveau signalement</a>
+                        <a href="{{ route('signalement.create') }}">Enregistrer un nouveau signalement</a>
                     </button>
                 </div>
                 <!-- /.card-header -->
@@ -24,21 +24,26 @@
                                     client</button>
                             </td> --}}
                             <tr>
-                                <th>Nom du site</th>
-                                <th>Situation géographique</th>
-                                <th>Nom responsable </th>
-                                <th>Contact responsable</th>
+                                <th>Intitulé</th>
+                                <th>Description</th>
+                                <th>Heure signalement </th>
+                                <th>Site concerné </th>
+                                <th>Type</th>
+                                <th>Interlocuteur</th>
                                 <th>Client</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($sites as $site)
+                            @foreach ($decls as $dec)
                             <tr>
-                                <td> {{ $site->libelle }}</td>
-                                <td> {{ $site->sit_geo }} </td>
-                                <td> {{ $site->nomResp }} </td>
-                                <td> {{ $site->contactResp }} </td>
-                                <td> {{ $site->Client->designation }} </td>
+                                <td> {{ $dec->title }}</td>
+                                <td> {{ $dec->description }} </td>
+                                <td>{{ $dec->dateHeure }}</td>
+                                <td> {{ $dec->site->libelle }} </td>
+                                <td> {{ $dec->type }} </td>
+                                <td> {{ $dec->interlocuteur }} </td>
+                                <td> {{ $dec->client->designation }} </td>
+
                             </tr>
                             @endforeach
 
@@ -62,10 +67,12 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>Nom du site</th>
-                                <th>Situation géographique</th>
-                                <th>Nom responsable </th>
-                                <th>Contact responsable</th>
+                                <th>Intitulé</th>
+                                <th>Description</th>
+                                <th>Heure signalement </th>
+                                <th>Site concerné </th>
+                                <th>Type</th>
+                                <th>Interlocuteur</th>
                                 <th>Client</th>
                             </tr>
                         </tfoot>

@@ -56,13 +56,6 @@ class SiteController extends Controller
 
         //redirection vers la liste + mesage succes
         return redirect()->route('Sites.index',)->with('success', 'Site crée avec succès !');
-
-
-        // return redirect()->route('Clients.index')->with('success', 'Client crée avec succès !');
-
-
-
-
     }
 
     /**
@@ -71,6 +64,7 @@ class SiteController extends Controller
     public function show(Site $site)
     {
         //
+        return view('Sites.show', compact('site'));
     }
 
     /**
@@ -78,7 +72,8 @@ class SiteController extends Controller
      */
     public function edit(Site $site)
     {
-        //
+        //Modifier un site
+        return view('Sites.edit', compact('site'));
     }
 
     /**

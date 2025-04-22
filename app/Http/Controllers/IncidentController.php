@@ -13,6 +13,9 @@ class IncidentController extends Controller
     public function index()
     {
         //
+        $incidents = Incident::all();
+        // $allDeclencheurs = Incident::all();
+        return view('Declencheur.index', compact('incidents'));
     }
 
     /**

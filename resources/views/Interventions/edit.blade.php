@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <h1>Enregistrer un nouveau signalement</h1>
+            <h1>Enregistrer un nouveau site d'intervention</h1>
         </div>
     </div>
     <div class="card card-primary">
@@ -15,89 +15,29 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form method="POST" action="{{ route('signalement.store')}}">
+        <form method="POST" action="{{ route('Site.store')}}">
             @method('POST')
             @csrf
             <div class="card-body">
                 <div class="form-group">
-                    <label for="libelle_site">Intitulé</label>
+                    <label for="libelle_site">Libellé</label>
                     <input class="form-control form-control-lg" id="libelle_site" type="text" placeholder="Désignation"
                         aria-label=".form-control-lg example" name="libelle" maxlength="30" required>
-                    <div class="col-sm-6">
 
-                        <!-- textarea -->
-                        <div class="form-group">
-                            <label>Description</label>
-                            <textarea class="form-control" rows="3"
-                                placeholder="Breve description du probleme"></textarea>
-                        </div>
-                    </div>
+                    <label for="sit_geo">Situation Géographique site </label>
+                    <input class="form-control form-control-lg" id="sit_geo" type="text"
+                        placeholder="Adresse géographique" aria-label=".form-control-lg example" name="sit_geo"
+                        max="255">
 
-                    <div class="form-group">
-                        <label>Date et heure </label>
-
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="far fa-clock"></i></span>
-                            </div>
-                            <input type='datetime-local' class="form-control float-right" id="dateHeure"
-                                placeholder="Date et heure" name="dateHeure" required>
-                        </div>
-                        <!-- /.input group -->
-                    </div>
-                    <div class="form-group">
-                        <label for="type">Type de signalement</label>
-                        <select class="form-control" name="type" id="type">
-
-                            <option value="Incident">Incident</option>
-                            <option value="Installation">Installation</option>
-                            <option value="Signalement_Dysfonctionement">Signalement Dysfonctionement</option>
-                        </select>
-                    </div>
-
-
-                    <label for="nmResp_site">Nom Interlocuteur </label>
-                    <input class="form-control form-control-lg" id="interlocuteur" type="text"
+                    <label for="nmResp_site">Nom du responsable site</label>
+                    <input class="form-control form-control-lg" id="nmResp_site" type="text"
                         placeholder="Nom du responsable ou contact sur place" aria-label=".form-control-lg example"
-                        name="interlocuteur" maxlength="30">
+                        name="nomResp" maxlength="50" required='false"'>
 
-                    <div class="form-group">
-                        <label>Telephone Interlocuteur</label>
+                    <label for="telResp_site">Télephone responsable site </label>
+                    <input class="form-control form-control-lg" id="telResp_site" type="tel" placeholder="N° Telephone"
+                        aria-label=".form-control-lg example" name="contactResp" maxlength="20" required='false'>
 
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                            </div>
-                            <input type="tel" class="form-control" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" name="numInter"
-                                id="numInter">
-                        </div>
-                        <!-- /.input group -->
-                    </div>
-
-                    <div class="form-group">
-                        <label for="client_id">Site concerné</label>
-                        <select class="form-control" name="site_id" id="site_id">
-                            @foreach ($sites as $site)
-                            <option value="{{ $site->id}}"> {{ $site->libelle }}</option>
-                            @endforeach
-
-                        </select>
-                    </div>
-                    <label for="systeme_concerné">Systeme concerné</label>
-                    <input class="form-control form-control-lg" id="systeme_concerné" type="text"
-                        placeholder="Systeme concerné" aria-label=".form-control-lg example" name="systeme_concerné"
-                        maxlength="30" required>
-
-                    <div class="form-group">
-                        <label for="client_id">Etat du systeme</label>
-                        <select class="form-control" name="etat_syst" id="etat_syst">
-
-                            <option value="En panne">En panne</option>
-                            <option value="Defectueux">Défectueux</option>
-                            <option value="Hors service">Hors service</option>
-                            <option value="Fonctionnel">Fonctionnel</option>
-                        </select>
-                    </div>
                     <div class="form-group">
                         <label for="client_id">Client concerné</label>
                         <select class="form-control" name="client_id" id="client_id">

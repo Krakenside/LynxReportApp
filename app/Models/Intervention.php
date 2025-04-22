@@ -8,7 +8,7 @@ class Intervention extends Model
 {
     //
     protected $fillable = [
-        'intitule',
+        'Title',
         'description',
         'statut',
         'date_action',

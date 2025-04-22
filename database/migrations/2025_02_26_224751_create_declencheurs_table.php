@@ -22,7 +22,7 @@ return new class extends Migration
             $table->foreignId('site_id')->nullable()->constrained('sites');
             $table->mediumText('systeme_concerné');
             $table->enum('etat_syst', ['En panne', 'Defectueux', 'Hors service', 'Fonctionnel'])->nullable(false);
-            $table->foreignId('client_id')->nullable(true)->constrained('clients');
+            $table->foreignId('client_id')->nullable()->constrained('clients');
             $table->timestamps();
         });
     }

@@ -125,6 +125,8 @@
 <!-- AdminLTE App -->
 <script src="{{asset('adminlte/dist/js/adminlte.min.js')}}"></script>
 @stack('scripts')
+
+@yield('AutresScripts');
 </body>
 
 </html>
