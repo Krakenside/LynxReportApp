@@ -1,5 +1,5 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <a href="#" class="brand-link">
+    <a href="/" class="brand-link">
         <span class="brand-text font-weight-light">Back Office </span>
     </a>
     <div class="sidebar">
@@ -23,7 +23,7 @@
                 <li class="nav-item">
                     <a href="{{ route('Clients.index')}}" class="nav-link">
                         {{-- <i class="fa-solid fa-users"></i> --}}
-                        <i class="nav-icon fas fa-th"></i>
+                        <i class="fas fa-users"></i>
                         <p>
                             Clients
                             {{-- <span class="right badge badge-danger">New</span> --}}
@@ -57,6 +57,17 @@
 
                         <p>
                             Signalements
+                            {{-- <i class="nav-icon fas fa-tree"></i> --}}
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('Techniciens.index')}}" class="nav-link">
+                        <i class="ion ion-person-add"></i>
+                        {{-- <i class="nav-icon fas fa-th"></i> --}}
+
+                        <p>
+                            Techniciens
                             {{-- <i class="nav-icon fas fa-tree"></i> --}}
                         </p>
                     </a>

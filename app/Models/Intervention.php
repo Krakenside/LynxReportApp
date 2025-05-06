@@ -9,21 +9,21 @@ class Intervention extends Model
     //
     protected $fillable = [
         'Title',
-        'description',
+        'Description',
         'statut',
-        'date_action',
-        'dateH_deb',
-        'dateH_fin',
-        'type_action',
-        'id_signalement',
-        'id_TechExec'
+        'date_debut',
+        'date_fin',
+        'incident_id',
+        'user_id',
+
+
     ];
     public function Signalement()
     {
-        return $this->belongsTo(Declencheur::class, 'id_signalement', 'id');
+        return $this->belongsTo(Declencheur::class, 'incident_id', 'id');
     }
     public function Technicien()
     {
-        return $this->belongsTo(User::class, 'id_TechExec', 'id');
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 }

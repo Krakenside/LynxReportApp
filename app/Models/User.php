@@ -49,4 +49,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function Interventions()
+    {
+        return $this->hasMany(Intervention::class, 'user_id', 'id');
+    }
 }

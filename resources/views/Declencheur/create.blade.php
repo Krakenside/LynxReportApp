@@ -68,8 +68,8 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-phone"></i></span>
                             </div>
-                            <input type="tel" class="form-control" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" name="numInter"
-                                id="numInter">
+                            <input type="tel" class="form-control" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}"
+                                name="numInter" id="numInter">
                         </div>
                         <!-- /.input group -->
                     </div>

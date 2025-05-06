@@ -38,7 +38,7 @@ class InterventionController extends Controller
         // Validate the request data
         $validated = $request->validate([
             'Title' => 'required|string|max:100',
-            'Description' => 'required|string|max:255',
+            'Description' => 'required|max:2000',
             'statut' => 'required|string',
             'date_debut' => 'required|date',
             'date_fin' => 'date',
@@ -58,7 +58,7 @@ class InterventionController extends Controller
         $new_intervention->save(); // Save the new intervention to the database
 
         // Redirect to the index page with a success message
-        return redirect()->route('interventions.index')->with('success', 'Intervention crée avec succès');
+        return redirect()->route('intervention.index')->with('success', 'Intervention crée avec succès');
     }
 
     /**
@@ -117,6 +117,6 @@ class InterventionController extends Controller
     {
         //
         $intervention->delete(); // Delete the intervention
-        return redirect()->route('interventions.index')->with('success', 'Intervention supprimée avec succès');
+        return redirect()->route('int')->with('success', 'Intervention supprimée avec succès');
     }
 }

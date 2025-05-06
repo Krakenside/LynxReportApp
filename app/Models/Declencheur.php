@@ -24,8 +24,14 @@ class Declencheur extends Model
         return $this->belongsTo(Site::class, 'site_id', 'id');
     }
 
-    public function Client(){
+    public function Client()
+    {
 
-        return $this->belongsTo(Client::class,'client_id','id');
+        return $this->belongsTo(Client::class, 'client_id', 'id');
+    }
+
+    public function Interventions()
+    {
+        return $this->hasMany(Intervention::class, 'incident_id', 'id');
     }
 }

@@ -8,6 +8,15 @@ use Illuminate\Http\Request;
 
 class SiteController extends Controller
 {
+    //lister tous les intervetions pour un site donné
+    public function showInterventions(Site $site)
+    {
+        //On recupere tous les interventions pour un site donné
+        // $interventions = $site->interventions()->get();
+        $interventions = $site->Declencheurs()->with('Interventions')->get();
+        return view('Sites.ShowIntervention', compact('interventions', 'site'));
+    }
+
     /**
      * Display a listing of the resource.
      */

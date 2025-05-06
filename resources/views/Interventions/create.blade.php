@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Nouveau site')
+@section('title', 'Nouvelle intervention')
 
 @section('content')
 <div class="container-fluid">
@@ -69,7 +69,7 @@
 
 
                         <div class="form-group">
-                            <label for="client_id">Incident </label>
+                            <label for="client_id">Incident concerné :</label>
                             <select class="form-control" name="incident_id" id="incident_id">
                                 @foreach ($AllSignalements as $signalement)
                                 <option value="{{ $signalement->id }}"> {{ $signalement->title }}</option>

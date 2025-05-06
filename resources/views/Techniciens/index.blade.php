@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Clients')
+@section('title', 'Techiciens')
 
 @section('content')
 <div class="container-fluid">
@@ -14,7 +14,7 @@
                         nouveau client</a></button> --}}
                 <div class="card-header">
 
-                    <h3 class="card-title">Liste des clients de LYNX NETWORK</h3>
+                    <h3 class="card-title">Liste des Techniciens de LYNX NETWORK</h3>
                     {{-- <button type="button" class="btn btn-primary mb-2"> <a href="{{route('Client.create')}}">Créer
                             un
                             nouveau client</a></button> --}}
@@ -24,12 +24,9 @@
                 <div class="card-body">
                     <div class="btn-group mb-2" role="group" aria-label="Button group with nested dropdown">
                         <a href="{{route('Client.create')}}"> <button type="button" class="btn btn-success">Enregistrer
-                                une nouveau client</button></a>
+                                une nouveau technicien</button></a>
                     </div>
-                    <div class="btn-group mb-2" role="group" aria-label="Button group with nested dropdown">
-                        <a href="{{ route('intervention.create') }}"> <button type="button"
-                                class="btn btn-dark">Recherche par critère</button></a>
-                    </div>
+
                     {{-- <div class="btn-group mb-2" role="group" aria-label="Button group with nested dropdown">
                         <a href="{{ route('intervention.create') }}"> <button type="button"
                                 class="btn btn-dark">Recherche par Intervenant</button></a>
@@ -38,47 +35,42 @@
 
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
-                            {{-- <td>
-                                <button type="button" class="btn btn-block bg-gradient-success">Créer un nouveau
-                                    client</button>
-                            </td> --}}
+
                             <tr>
-                                <th>Désignation</th>
-                                <th>Type</th>
-                                <th>Adresse </th>
-                                <th>Contact</th>
+                                <th>Nom</th>
+                                <th>Prenom</th>
                                 <th>E-mail</th>
+                                <th>Poste occupé</th>
                                 <th>Actions</th>
-                                <th>Autres</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($clients as $client)
+                            @foreach ($techniciens as $technicien)
                             <tr>
-                                <td style="font-size: 1.2em">{{ $client->designation }}</td>
-                                <td> {{ $client->type }} </td>
-                                <td> {{ $client->adresse }} </td>
-                                <td> {{ $client->telephone }} </td>
-                                <td>{{ $client->adr_mail }} </td>
+                                <td>{{ $technicien->name }}</td>
+                                <td> {{ $technicien->prenom }} </td>
+                                <td>{{ $technicien->email }} </td>
+                                <td>{{ $technicien->posteOcc }} </td>
                                 <td>
                                     <div class="btn-group mb-2" role="group"
                                         aria-label="Btnon group with nested dropdown">
-                                        <a href="{{route('Client.show',$client->id)}}">
+                                        <a href="{{route('Technicien.show',$technicien->id)}}">
 
                                             <button type="button" class="btn btn-success mr-2 bg-black"><i
                                                     class="fa fa-eye"></i></button></a>
                                         {{-- <button type="button" class="btn btn-success mr-2"><i
                                                 class="fa fa-info"></i></button></a> --}}
-                                        <a href="{{ route('Client.edit',$client->id) }}">
+                                        <a href="{{ route('Technicien.edit',$technicien->id) }}">
                                             <button type="button" class="btn btn-warning mr-1"><i
                                                     class="fa fa-edit"></i></button></a>
-                                        <form action="{{ route('Client.delete',$client->id)}}">
+                                        <form action="{{ route('Technicien.delete',$technicien->id)}}">
                                             @csrf
                                             @method('DELETE')
-                                            <a href="{{ route('Client.delete',$client->id)}}">
-                                                <button type="submit" class="btn btn-danger ml-1"><i
-                                                        class="fa fa-trash"></i></button></a>
+                                            <a href="{{ route('Technicien.delete',$technicien->id)}}">
+                                                <button type="submit" class="btn btn-danger ml-1"><i class="fa fa-trash"></i></button>
+                                            </a>
                                         </form>
+
 
 
 
@@ -89,31 +81,54 @@
                                         <div class="card-header">
                                             <h4 class="card-title w-100">
                                                 <a class="d-block w-100" data-toggle="collapse" href="#collapseOne">
-                                                    Sites pour ce client
+                                                    Actions pour ce Technicien
                                                 </a>
                                             </h4>
                                         </div>
+
                                         <div id="collapseOne" class="collapse show" data-parent="#accordion">
                                             <div class="card-body">
-                                                {{ $client->sites->count() }} site(s) pour ce client
+                                                {{ $technicien->Interventions->count() }} Interventions pour ce
+                                                technicien
                                                 <table class="table table-bordered table-striped">
                                                     <thead>
                                                         <tr>
-                                                            <th>Site</th>
-                                                            <th>Adresse</th>
-                                                            <th>Contact</th>
+                                                            <th>Intitulé</th>
+                                                            <th>Lieux</th>
+                                                            <th>Statut</th>
+                                                            <th>Date Intervention</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        @foreach ($client->sites as $site)
+                                                        @foreach ($technicien->Interventions as $Interv)
                                                         <tr>
-                                                            <td>{{ $site->libelle }} <a
-                                                                    href="{{route('Site.show',$site->id)}}"><button
+                                                            <td>{{ $Interv->Title }} <a
+                                                                    href="{{route('intervention.show',$Interv->id)}}"><button
                                                                         type="button"
                                                                         class="btn btn-success">Détails</button></a>
                                                             </td>
-                                                            <td>{{ $site->sit_geo }}</td>
-                                                            <td>{{ $site->contactResp }}</td>
+                                                            <div style="display: none">
+                                                                @switch($Interv->statut)
+                                                                @case('Terminé')
+                                                                {{ $var2 = 'btn btn-success'; }}
+                                                                @break
+                                                                @case('En cours')
+                                                                {{ $var2 = 'btn btn-warning'; }}
+                                                                @break
+                                                                @case('En attendant')
+                                                                {{ $var2 = 'btn btn-primary'; }}
+                                                                @break
+                                                                @default
+                                                                {{ $var2 = 'btn btn-success'; }}
+                                                                @endswitch
+                                                            </div>
+                                                            <td>
+                                                                <button type="button" class="{{ $var2 }} mb-2">
+                                                                    {{ $Interv->statut }} </button>
+                                                            </td>
+                                                            <td>{{ $Interv->Signalement->site->sit_geo}}</td>
+                                                            <td>{{ $Interv->date_debut }}</td>
+
 
                                                         </tr>
                                                         @endforeach
@@ -130,13 +145,11 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>Désignation</th>
-                                <th>Type</th>
-                                <th>Adresse </th>
-                                <th>Contact</th>
+                                <th>Nom</th>
+                                <th>Prenom</th>
                                 <th>E-mail</th>
+                                <th>Poste occupé</th>
                                 <th>Actions</th>
-                                <th>Autres</th>
                             </tr>
                         </tfoot>
                     </table>

@@ -7,9 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Site extends Model
 {
     //
-    protected $fillable = ['libelle','sit_geo','nomResp','contactResp','client_id'];
-    public function Client(){
-        return $this->belongsTo(Client::class,'client_id');
-    }
+    protected $fillable = ['libelle', 'sit_geo', 'nomResp', 'contactResp', 'client_id'];
 
+    public function Client()
+    {
+        return $this->belongsTo(Client::class, 'client_id');
+    }
+    public function Declencheurs()
+    {
+        return $this->hasMany(Declencheur::class, 'site_id');
+    }
 }

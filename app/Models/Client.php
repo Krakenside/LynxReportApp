@@ -13,4 +13,9 @@ class Client extends Model
     use HasFactory;
     //
     protected $fillable = ['designation', 'type', 'adresse', 'telephone', 'adr_mail'];
+
+    public function sites()
+    {
+        return $this->hasMany(Site::class, 'client_id');
+    }
 }

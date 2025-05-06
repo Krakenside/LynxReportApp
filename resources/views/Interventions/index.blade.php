@@ -49,20 +49,22 @@
                         </thead>
                         <tbody>
                             @foreach ($allInterventions as $Intervention)
+                            <div style="display: none">
+                                @switch($Intervention->statut)
+                                @case('Terminé')
+                                {{ $var2 = 'btn btn-success'; }}
+                                @break
+                                @case('En cours')
+                                {{ $var2 = 'btn btn-warning'; }}
+                                @break
+                                @case('En attendant')
+                                {{ $var2 = 'btn btn-primary'; }}
+                                @break
+                                @default
+                                {{ $var2 = 'btn btn-success'; }}
+                                @endswitch
+                            </div>
 
-                            @switch($Intervention->statut)
-                            @case('Terminé')
-                            {{ $var2 = 'btn btn-success'; }}
-                            @break
-                            @case('En cours')
-                            {{ $var2 = 'btn btn-warning'; }}
-                            @break
-                            @case('En attendant')
-                            {{ $var2 = 'btn btn-primary'; }}
-                            @break
-                            @default
-                            {{ $var2 = 'btn btn-success'; }}
-                            @endswitch
 
                             <tr>
                                 <td> {{ $Intervention->Title }}</td>
@@ -72,9 +74,9 @@
                                         {{$Intervention->statut}} </button>
                                 </td>
                                 <td> {{ $Intervention->date_debut }} </td>
-                                <td> {{ $Intervention->user_id}} </td>
-                                <td> {{ $Intervention->incident_id }} </td>
-                                <td>
+                                <td> {{ $Intervention->Technicien->name}} </td>
+                                <td> {{ $Intervention->Signalement->title }} </td>
+                                {{-- <td>
                                     <div class="btn-group mb-2" role="group" aria-label="Basic mixed styles example">
                                         <a href="{{ route('intervention.delete',$Intervention->id)}}"> <button
                                                 type="button" class="btn btn-danger">Supprimer</button></a>
@@ -82,6 +84,22 @@
                                                 type="button" class="btn btn-warning">Modifier</button></a>
                                         <a href="{{route('intervention.show',$Intervention->id)}}"><button type="button"
                                                 class="btn btn-success">Voir</button></a>
+                                    </div>
+                                </td> --}}
+                                <td>
+                                    <div class="btn-group mb-2" role="group"
+                                        aria-label="Btnon group with nested dropdown">
+                                        <a href="{{route('intervention.show',$Intervention->id)}}">
+                                            <button type="button" class="btn btn-success mr-2 bg-black"><i
+                                                    class="fa fa-eye"></i></button></a>
+                                        <a href="{{ route('intervention.edit',$Intervention->id) }}">
+                                            <button type="button" class="btn btn-warning mr-1"><i
+                                                    class="fa fa-edit"></i></button></a>
+                                        <a href="{{ route('intervention.delete',$Intervention->id)}}">
+                                            <button type="button" class="btn btn-danger ml-1"><i
+                                                    class="fa fa-trash"></i></button></a>
+
+
                                     </div>
                                 </td>
 

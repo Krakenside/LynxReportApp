@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rules\In;
+use Ramsey\Uuid\Type\Integer;
 
 class ClientController extends Controller
 {
@@ -53,21 +55,33 @@ class ClientController extends Controller
         return redirect()->route('Clients.index')->with('success', 'Client crée avec succès !');
     }
 
+    //Fonction pour afficher les sites d'un client donné
+    public function showSites(Client $client)
+    {
+        //
+
+        return view('Clients.show', compact('client'));
+    }
+
     /**
      * Display the specified resource.
      */
-    public function show(Client $client)
+    public function show($id)
     {
-        //
+        // on recupère le client par son id
+        $client = Client::find($id);
+        //On retourne la vue avec les infos du client
         return view('Clients.show', compact('client'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Client $client)
+    public function edit($id)
     {
         //
+        $client = Client::find($id);
+        return view('Clients.edit', compact('client'));
     }
 
     /**

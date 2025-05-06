@@ -77,6 +77,21 @@ class DeclencheurController extends Controller
         return redirect()->route('signalement.index')->with('success', 'Signalement crée avec succès !');
     }
 
+
+    //fonction pour recuperer les interventions pour un signalement donné
+    public function showInterventions($id)
+    {
+        //recuperer le signalement donné
+        $signalement = Declencheur::find($id);
+        //recuperer la liste des interventions et les classer par date
+        $interventions = $signalement->Interventions()->orderBy('date_debut', 'desc')->get();
+        // $interventions = $signalement->interventions()->orderBy('dateHeure', 'desc')->get();
+        // dd($interventions, $interventions->count());
+        //On retourne la vue avec les infos du signalement et la liste des interventions
+        return view('Declencheur.actions', compact('interventions', 'signalement'));
+    }
+
+
     /**
      * Display the specified resource.
      */
